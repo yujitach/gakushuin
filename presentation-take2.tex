@@ -751,38 +751,128 @@ $\mathbb{CP}^2$ 内の二つの $\mathbb{CP}^1$ は一ヶ所で交わる
 \[
 \inc{pic17}
 \]
-境界が $1+1$ 次元でバルクが $2+1$ 次元の典型例は量子ホール効果。
+典型例は量子ホール効果:
+\begin{itemize}
+\item 1+1次元の境界には\alert{ギャップレスカイラルフェルミオン}
+\item 2+1次元のバルクの有効作用は\green{Chern-Simons}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+考える対称性は電磁気の $U(1)$ 対称性。
+ゲージ変換は \[
+ A_\mu \to  A_\mu+\frac{1}{2\pi i} e^{-2\pi i\chi}\partial_\mu  e^{2\pi i\chi} = A_\mu + \partial_\mu \chi
+\] 
+だから\[
+\oint A_x dx \to \oint A_x dx + \oint \partial_x \chi dx 
+\] $\chi\sim \chi+1$ だから \[
+\oint A_x dx　\sim \oint A_x dx + 1.
+\]
+\end{frame}
+
+
+\begin{frame}
+$1+1$ 次元境界のフェルミオンを考える。\\
+空間方向をさらに円周上において考える。
+\[
+\inc{pic18}
+\]
+一粒子エネルギーレベルは \[
+E \propto n + \oint A_x dx
+\]
+負エネルギー状態は Dirac の海。
 \end{frame}
 \begin{frame}
-バルクの有効作用は Chern-Simons 項 \[
-\int_{M_3} AdA \propto \int_{M_3} \epsilon^{\mu\nu\rho} A_{\mu} \partial_\rho A_\sigma
-\]
-ゲージ変換 \[
-A\mapsto A+d\chi
+きちんと正則化すると、Dirac の海は電荷 \[
+q = \oint A_x dx 
+\] を持つ。
+分配関数は \[
+Z=\tr e^{-\beta H} e^{ iq \oint A_t dt}
+\] だが、ゲージ変換\[
+\oint A_t dt \to \oint A_t dt +\oint \partial_t \chi dt
 \] のもとで \[
-\int_{M_3} AdA \mapsto \int_{M_3} AdA + \int_{M_3} d(\chi dA ) = \int_{\partial M_3} \chi dA.
-\]
+Z \to Z e^{iq} = Z \exp({i\oint \partial_t \chi dt\oint A_x dx})
+\] となってしまう。分配関数の位相が定まらない！
 \end{frame}
 
 \begin{frame}
 \[
 \inc{pic17}
 \]
-境界でゲージ変換の不変性が \[
-\int_{\partial M_3} \chi dA
-\]だけ破れている。これと丁度逆の破れをもつ自由度が境界にいないといけない。
-\alert{一方向にのみ動くギャップレスフェルミオン}が存在する。
+境界の分配関数の位相の定まらなさが、\\
+バルクの分配関数の位相の定まらなさで相殺される。
 \end{frame}
 
 \begin{frame}
-$1+1$ 次元境界の空間方向をさらに円周上において考える。\[
-\inc{pic18}
+バルクの有効作用は Chern-Simons 項 $e^{iS_\text{CS}}$ ただし \[
+S_\text{CS}=\int_{M_3} AdA \propto \int_{M_3} \epsilon^{\mu\nu\rho} A_{\mu} \partial_\rho A_\sigma
 \]
-$\varphi:=\int A_x dx$ とすると、エネルギーレベルは $E \propto n + \varphi $
+ゲージ変換 \[
+A\mapsto A+d\chi
+\] のもとでの変化は\[
+\delta \int_{M_3} AdA = \int_{M_3} d\chi dA 
+= \int_{\partial M_3} (d\chi) A.
+\]
+いまの状況では \[
+= \oint \partial_t\chi dt \oint A_x dx
+\] で、ちょうど境界のフェルミオンの位相の定まらなさを相殺。
+\end{frame}
 
-負エネルギー状態は Dirac の海。きちんと正則化すると、Dirac の海は電荷 \[
-q = \varphi
-\] を持つ。
+\begin{frame}
+今日の Maxwell 理論のアノマリの場合は、
+\[
+\inc{pic17}
+\]
+\begin{itemize}
+\item 3+1 次元の境界に Maxwell 理論
+\item 4+1 次元のバルクには Chern-Simons 理論の親戚
+\end{itemize}
+\end{frame}
+\def\Sq{\mathop{\mathrm{Sq}}\nolimits}
+\begin{frame}
+考える対称性が
+$\mathbb{Z}_2$ 電気的 $1$-対称性と
+$\mathbb{Z}_2$ 磁気的 $1$-対称性の場合には、
+それぞれにゲージ場 \[
+V_\text{e}, V_\text{m} \in H^2(M_5,\mathbb{Z}_2)
+\]を導入。バルクの作用は \[
+\exp(\pi i \int_{M_5} V_\text{e} \Sq^1 V_\text{m})
+\]
+ここで $\Sq^1$ は Steenrod 作用素というもの。\\
+(1940年代後半に導入された代数トポロジーの概念)
+\end{frame}
+
+\begin{frame}
+考える対称性が一般共変性の場合は、$V_\text{e}, V_\text{m}$ を両方とも
+Stiefel-Whitney 類 $w_2$ にとる。するとバルクの作用は \begin{multline*}
+\exp(\pi i \int_{M_5} V_\text{e} \Sq^1 V_\text{m})\\
+=\exp(\pi i \int_{M_5} w_2 \Sq^1 w_2) \\
+= \exp(\pi i \int_{M_5} w_2  w_3) .
+\end{multline*}
+de Rham 不変量と呼ばれるもの。
+(導入されたのは1931年らしい)
+\end{frame}
+
+\begin{frame}
+向き付け可能多様体 $M_d$, $M_{d}'$ が $X_{d+1}$ でつながるとき
+\[
+\inc{pic19}
+\]
+$M_d\sim M_d'$ と定めた同値類を向き付きコボルディズムという。特に\[
+\inc{pic20}
+\] なら $M_d \sim 0$ という。
+\end{frame}
+
+\begin{frame}
+\[
+\inc{pic19}\qquad \inc{pic20}
+\]
+五次元向き付きコボルディズム類は二種類で、de Rham 不変量 \[
+\exp(\pi i \int_{M_5} w_2  w_3) = \pm1 
+\] で区別されることが知られている。
+
+1950から60年代の代数トポロジーの結果。\\
+Chern-Simons が 70 年代半ばなので、それより昔の話。
 \end{frame}
 
 \end{document}
