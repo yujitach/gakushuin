@@ -1,3 +1,5 @@
+*.snm
+*.nav
 *.dvi
 *.synctex.gz
 *.hrf
