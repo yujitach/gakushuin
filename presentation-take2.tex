@@ -14,10 +14,12 @@
 %% fonts
 
 \usepackage[no-math]{fontspec}
-%\setmainfont[Mapping=tex-text,Numbers={Lining}]{Hoefler Text}
-\setmainfont[Mapping=tex-text]{Optima}
+\setmainfont[Mapping=tex-text,Numbers={Lining}]{Hoefler Text}
+%\setmainfont[Mapping=tex-text]{Optima}
 \usepackage[SlantFont]{xeCJK}
-\setCJKmainfont{Hiragino Maru Gothic Pro}
+%\setCJKmainfont{Hiragino Maru Gothic Pro}
+\setCJKmainfont{Hiragino Mincho Pro}
+%\setCJKmainfont{Hiragino Sans W2}
 \setCJKfamilyfont{tt}{Hiragino Maru Gothic Pro}
 
 
@@ -203,22 +205,26 @@ Maxwell 理論の量子異常について
 \def\div{\mathop{\mathrm{div}}}
 \def\rot{\mathop{\mathrm{rot}}}
 \begin{frame}
+\LARGE
 \begin{align*}
 \div \vec B&=\rho_m,  &\rot \vec E + \partial_t \vec B&=\vec J_m, \\
 \div \vec E&=\rho_e, & \rot \vec B - \partial_t \vec E&=\vec J_e.
 \end{align*}
 \begin{center}
+
+\bigskip\bigskip
+
 とっても重要。
 \end{center}
 
 \end{frame}
 
 \begin{frame}
+\LARGE
 \begin{align*}
 \div \vec B&=\rho_m,  &\rot \vec E + \partial_t \vec B&=\vec J_m, \\
 \div \vec E&=\rho_e, & \rot \vec B - \partial_t \vec E&=\vec J_e.
 \end{align*}
-
 \begin{center}
 ガリレイ変換で不変でない！ 
 
@@ -230,18 +236,17 @@ $\downarrow$
 \end{frame}
 
 \begin{frame}
-\begin{align*}
+\LARGE\begin{align*}
 \div \vec B&=\rho_m,  &\rot \vec E + \partial_t \vec B&=\vec J_m, \\
 \div \vec E&=\rho_e, & \rot \vec B - \partial_t \vec E&=\vec J_e.
 \end{align*}
-
 \begin{center}
 電磁双対性: $\vec E\leftrightarrow \vec B$
 \end{center}
 \end{frame}
 
 \begin{frame}
-\begin{align*}
+\LARGE\begin{align*}
 \div \vec B&=\rho_m,  &\rot \vec E \alert{+} \partial_t \vec B&=\vec J_m, \\
 \div \vec E&=\rho_e, & \rot \vec B \alert{-} \partial_t \vec E&=\vec J_e.
 \end{align*}
@@ -269,7 +274,7 @@ S^2: & (\vec E,\vec B) \mapsto \alert{-}(\vec E,\vec B)
 \inc{pic2}
 \]
 \begin{center}
-ポインティングベクトル $\vec E\times \vec B$から角運動量 $\propto qm$ が出る。
+ポインティングベクトル $\vec E\times \vec B$ から角運動量 $\propto qm$ が出る。
 \end{center}
 \end{frame}
 
@@ -331,27 +336,20 @@ c & d
 
 \end{frame}
 \begin{frame}
-すなわち\[
-\begin{pmatrix}
-\vec E \\
-\vec B
-\end{pmatrix}
-\to
-\begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix}
-\begin{pmatrix}
-\vec E \\
-\vec B
-\end{pmatrix}
-\]
-において
 \[
+\left.
+\begin{array}{c}
+\text{$a,b,c,d$ は整数} \\[.5em]
+\det\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}=1
+\end{array}
+\right\} \Longrightarrow
 \begin{pmatrix}
 a & b \\
 c & d 
-\end{pmatrix} \in SL(2,\mathbb{Z})
+\end{pmatrix} \in \alert{SL(2,\mathbb{Z})}
 \]
 特に\[
 S: \begin{pmatrix}
@@ -381,8 +379,7 @@ c& d
 さて、ボゾンとフェルミオンの角運動量は
 \[
 \begin{array}{c|ccccccc}
-\text{\green{boson}} & 0\hbar & & \hbar &&2\hbar & &\cdots\\
-\hline
+\text{\green{boson}} & 0\hbar & & \hbar &&2\hbar & &\cdots\\[.5em]
 \text{\alert{fermion}} & & \frac{1}2\hbar & & \frac32\hbar && \frac52\hbar & \cdots
 \end{array}
 \]
@@ -400,13 +397,13 @@ c& d
 \begin{array}{c|cccccccccc}
 \text{電荷}& \cdots & -3 & -2 & -1 & 0 & +1 & +2 & +3 & \cdots \\
 \hline
-\text{$\b$ or $\f$?}& & \b & \b & \b & \b & \b & \b & \b & 
+\text{$\b$ or $\f$ ?}& & \b & \b & \b & \b & \b & \b & \b & 
 \end{array}
 \]か \[
 \begin{array}{c|cccccccccc}
 \text{電荷}& \cdots & -3 & -2 & -1 & 0 & +1 & +2 & +3 & \cdots \\
 \hline
-\text{$\b$ or $\f$?}& & \f & \b & \f & \b & \f & \b & \f & 
+\text{$\b$ or $\f$ ?}& & \f & \b & \f & \b & \f & \b & \f & 
 \end{array}
 \]の二通りがありうる。
 \end{frame}
@@ -414,15 +411,15 @@ c& d
 \begin{frame}
 同様に\[
 \begin{array}{c|cccccccccc}
-\text{\alert{磁荷}}& \cdots & -3 & -2 & -1 & 0 & +1 & +2 & +3 & \cdots \\
+\text{\orange{磁荷}}& \cdots & -3 & -2 & -1 & 0 & +1 & +2 & +3 & \cdots \\
 \hline
-\text{$\b$ or $\f$?}& & \b & \b & \b & \b & \b & \b & \b & 
+\text{$\b$ or $\f$ ?}& & \b & \b & \b & \b & \b & \b & \b & 
 \end{array}
 \]か \[
 \begin{array}{c|cccccccccc}
-\text{\alert{磁荷}}& \cdots & -3 & -2 & -1 & 0 & +1 & +2 & +3 & \cdots \\
+\text{\orange{磁荷}}& \cdots & -3 & -2 & -1 & 0 & +1 & +2 & +3 & \cdots \\
 \hline
-\text{$\b$ or $\f$?}& & \f & \b & \f & \b & \f & \b & \f & 
+\text{$\b$ or $\f$ ?}& & \f & \b & \f & \b & \f & \b & \f & 
 \end{array}
 \]
 という二通りもある。
@@ -504,6 +501,9 @@ $SL(2,\mathbb{Z})$ で $(q,m)\equiv (1,0)$, $(0,1)$, $(1,1)$ は入れ替えら�
 
 三次元の壁を演算子 $\mathcal{O}$ が越えること、と図示できる。
 
+例えば $G=\mathbb{Z}_2$ で、$\mathcal{O}$ が odd なら、
+壁を通過すると $-1$ かかる。
+
 \end{frame}
 
 \begin{frame}
@@ -514,16 +514,6 @@ $SL(2,\mathbb{Z})$ で $(q,m)\equiv (1,0)$, $(0,1)$, $(1,1)$ は入れ替えら�
 
 一次元の世界線が、二次元の壁を通過すること、と思える。
 
-\end{frame}
-
-\begin{frame}
-$d$-次元の対象に作用する対称性を $d$-対称性と呼ぼう。
-\[
-\begin{array}{cc}
-\text{$0$-対称性} & \incc{pic6} \\[5em]
-\text{$1$-対称性} & \incc{pic7} 
-\end{array}
-\]
 \end{frame}
 
 \begin{frame}
@@ -539,18 +529,30 @@ $d$-次元の対象に作用する対称性を $d$-対称性と呼ぼう。
 \end{frame}
 
 \begin{frame}
+$p$-次元の対象に作用する対称性を $p$-対称性と呼ぼう。
+\[
+\begin{array}{cc}
+\text{$0$-対称性} & \inc{pic6} \\[5em]
+\text{\alert{$\alert{1}$-対称性}} & \inc{pic7} 
+\end{array}
+\]
+\end{frame}
+
+
+
+\begin{frame}
 \[
 \inc{pic7}
 \]
-Maxwell 理論では、次のような二種類の $\mathbb{Z}_2$ $1$-対称性を考えられる:
+Maxwell 理論では、次のような二種類の $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}を考えられる:
 \begin{itemize}
-\item 電気的$1$-対称性:\\
+\item 電気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}:\\
 \qquad 電荷 $q$ の世界線を越えると、$(-1)^q$ がその期待値に掛かる
-\item 磁気的$1$-対称性:\\
-\qquad 磁荷 $m$ の世界線を越えると、$(-1)^m$ がその期待値に掛かる
+\item 磁気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}:\\
+\qquad 磁荷$m$ の世界線を越えると、$(-1)^m$ がその期待値に掛かる
 \end{itemize}
 ただし電荷 $q$ の世界線の期待値は Aharanov-Bohm 位相 \[
-\exp(2\pi i q\oint \vec A \cdot d\vec x )
+\exp(2\pi i q\int \vec A \cdot d\vec x )
 \]とする。
 \end{frame}
 
@@ -559,11 +561,13 @@ Maxwell 理論では、次のような二種類の $\mathbb{Z}_2$ $1$-対称性�
 \incc{pic7} \, \incc{pic9}
 \]
 電荷 $q$ の世界線を越えると、$(-1)^q$ がその期待値に掛かる \[
-\exp(2\pi i q\oint \vec A \cdot d\vec x )
-\mapsto (-1)^q \exp(i q\oint \vec A \cdot d\vec x )
-\] すなわち、電気的 $1$-対称性を実現する壁をつくっている黒線は\\
+\exp(2\pi i q\int_C \vec A \cdot d\vec x )
+\mapsto (-1)^q \exp(i q\int_{C'} \vec A \cdot d\vec x )
+\] すなわち、電気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}を実現する壁をつくっている黒線は\\
 磁束量子の半分 \[
-\vec B=\oint  \vec A \cdot d\vec x  = \pm\frac12
+\vec B=\oint_{S}  \vec A \cdot d\vec x  
+= \int_C  \vec A \cdot d\vec x -\int_{C'}  \vec A \cdot d\vec x 
+=  \pm\frac12
 \] を持っているということ。
 
 \end{frame}
@@ -574,18 +578,19 @@ Maxwell 理論では、次のような二種類の $\mathbb{Z}_2$ $1$-対称性�
 \]
 磁荷 $m$ の世界線を越えると、$(-1)^m$ がその期待値に掛かる
 
-これは、磁気的 $1$-対称性を実現する緑の壁には \[
+これは、磁気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}を実現する緑の壁には \[
 \exp(\pi i \iint \vec B \cdot d\vec\sigma)
 \]という因子があるということ。
 \end{frame}
 
 \begin{frame}
 \begin{gather*}
-\text{電気的 $1$-対称性の壁 \qquad 磁気的 $1$-対称性の壁}\\
+\text{電気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の壁 \qquad 磁気的  $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の壁}\\
 \qquad\qquad\vec B= \pm\frac12 \qquad\qquad \exp(\pi i \iint \vec B \cdot d\vec\sigma)\\
 \inc{pic11}
 \end{gather*}
-同時に時空に入れると、四次元時空では、二次元面ふたつは点で交わるので微妙なことになる。
+同時に時空に入れると、四次元時空では、二次元面ふたつは\\
+点で交わるので微妙なことになる。
 \[
 \inc{pic12}
 \]
@@ -601,12 +606,14 @@ e^{\pm\pi i} =\pm i
 \end{frame}
 
 \begin{frame}
-場の量子論において対称性を考えた際に、分配関数や真空期待値の位相が定まらなくなる現象を
+場の量子論において対称性を考えた際に、\\
+分配関数や真空期待値の位相が定まらなくなる現象を\\
 その対称性の\alert{量子異常}=\alert{アノマリ}という。
 
-もともと1969年代後半にフェルミオンの $U(1)$ 対称性に対して見つかったのがはじまり。
+もともと1969年代後半にフェルミオンの $U(1)$ 対称性に対して\\
+見つかったのがはじまり。
 
-今回のは Maxwell 理論の電気的 $1$-対称性と磁気的 $1$-対称性の間の混合アノマリという変なもの。
+今回のは Maxwell 理論の電気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}と磁気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の間の混合アノマリという変なもの。
 \end{frame}
 
 \begin{frame}
@@ -622,16 +629,20 @@ $360^\circ$ 捻るというのは非自明な操作。
 \end{frame}
 
 \begin{frame}
-電荷 $q=1$ を持った粒子が fermion であるとは、$360^\circ$ 捻る操作と
-電気的 $1$-対称性の壁で囲むというのが同じであると言うこと。
+電荷 $q=1$ を持った粒子が fermion であるとは、\\
+$360^\circ$ 捻る操作と
+電気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁で囲むというのが\\
+同じであると言うこと。
 \[
 \inc{pic15}
 \]
 \end{frame}
 
 \begin{frame}
-同様に、磁荷 $m=1$ を持った粒子が fermion であるとは、$360^\circ$ 捻る操作と
-磁気的 $1$-対称性の壁で囲むというのが同じであると言うこと。
+同様に、磁荷 $m=1$ を持った粒子が fermion であるとは、\\
+$360^\circ$ 捻る操作と
+磁気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁で囲むというのが\\
+同じであると言うこと。
 \[
 \inc{pic16}
 \]
@@ -643,11 +654,14 @@ $360^\circ$ 捻るというのは非自明な操作。
 
 四次元の時空が非自明だと、時空のパッチ間の貼り合わせのために、$360^\circ$ の捻りが必然的に生じることがある。
 
-これをはかるのが代数トポロジーでいう Stiefel-Whitney 類 $w_2$ というもので、四次元時空 $M_4$ に対して、$360^\circ$ の捻りに対応する $1$-対称性の壁に対応。
+これをはかるのが代数トポロジーでいう Stiefel-Whitney 類 $w_2$ というもの。(1940年代に導入された。)
+
+四次元時空 $M_4$ に対して、$360^\circ$ の捻りに対応する $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁に対応。
 
 複素射影平面 $\mathbb{CP}^2$ だと、$w_2$ はその中の複素射影直線 \[
 w_2=\mathbb{CP}^1\subset \mathbb{CP}^2
 \] に対応。
+
 
 \end{frame}
 
@@ -693,9 +707,15 @@ $SL(2,\mathbb{Z})$ で $(q,m)\equiv (1,0)$, $(0,1)$, $(1,1)$ は入れ替えら�
 
 \bigskip
 
-はじめの $SL(2,\mathbb{Z})$ 不変でない三つは、電気的 $1$-対称性の壁もしくは磁気的 $1$-対称性の壁どちらかしか挿入する必要がないので、何の問題も生じない。
+はじめの $SL(2,\mathbb{Z})$ 不変でない三つは、\\
+電気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁\green{もしくは}\\
+磁気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の壁\green{どちらかしか}挿入する必要がないので、\\
+何の問題も生じない。
 
-おしまいの $SL(2,\mathbb{Z})$ 不変な一つは、電気的 $1$-対称性の壁および磁気的 $1$-対称性の壁の両方を挿入する必要があるので、$\pm1$ だけの不定性が生じうる。
+おしまいの $SL(2,\mathbb{Z})$ 不変な一つは、\\
+電気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁\green{および}\\
+磁気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁\green{の両方を}挿入する必要があるので、\\
+$\pm1$ だけの不定性が生じうる。
 
 \end{frame}
 
@@ -710,7 +730,7 @@ $SL(2,\mathbb{Z})$ で $(q,m)\equiv (1,0)$, $(0,1)$, $(1,1)$ は入れ替えら�
 
 おしまいの $SL(2,\mathbb{Z})$ 不変な一つを複素射影平面 $\mathbb{CP}^2$ 上で考えると、\\
 フェルミオンの $360^\circ$ 捻りを捉える為、\\
-$w_2=\mathbb{CP}^1$ に電気的 $1$-対称性の壁と磁気的 $1$-対称性の壁を\\
+$w_2=\mathbb{CP}^1$ に電気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の壁と磁気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の壁を\\
 それぞれいれないといけない。
 
 \end{frame}
@@ -722,7 +742,8 @@ $\mathbb{CP}^2$ 内の二つの $\mathbb{CP}^1$ は一ヶ所で交わる
 \]
 ので、符号が定まらない危険がある。
 
-実際、$\mathbb{CP}^2$  の複素共役写像 $[z:w] \mapsto [\bar z:\bar w]$ のもとで、どうしても符号が反転してしまうことが確認出来る。
+実際、$\mathbb{CP}^2$  の複素共役写像 $[z:w] \mapsto [\bar z:\bar w]$ のもとで、\\
+どうしても符号が反転してしまうことが確認出来る。
 
 \end{frame}
 
@@ -738,7 +759,7 @@ $\mathbb{CP}^2$ 内の二つの $\mathbb{CP}^1$ は一ヶ所で交わる
 たとえば四次元時空 $\mathbb{CP}^2$ 上で考えると、\\
 その座標変換 $[z:w] \mapsto [\bar z:\bar w]$ のもとで分配関数を不変に保てない。
 
-一般共変性の微妙な破れがある。
+\alert{一般共変性の微妙な破れ}がある。
 
 これは\alert{大域的重力アノマリ}の例。
 
@@ -754,7 +775,7 @@ $\mathbb{CP}^2$ 内の二つの $\mathbb{CP}^1$ は一ヶ所で交わる
 典型例は量子ホール効果:
 \begin{itemize}
 \item 1+1次元の境界には\alert{ギャップレスカイラルフェルミオン}
-\item 2+1次元のバルクの有効作用は\green{Chern-Simons}
+\item 2+1次元のバルクの有効作用は \green{Chern-Simons}
 \end{itemize}
 \end{frame}
 
@@ -772,8 +793,8 @@ $\mathbb{CP}^2$ 内の二つの $\mathbb{CP}^1$ は一ヶ所で交わる
 
 
 \begin{frame}
-$1+1$ 次元境界のフェルミオンを考える。\\
-空間方向をさらに円周上において考える。
+$1+1$ 次元境界のフェルミオンを、
+空間方向を円周上において考える。
 \[
 \inc{pic18}
 \]
@@ -791,7 +812,7 @@ Z=\tr e^{-\beta H} e^{ iq \oint A_t dt}
 \] だが、ゲージ変換\[
 \oint A_t dt \to \oint A_t dt +\oint \partial_t \chi dt
 \] のもとで \[
-Z \to Z e^{iq} = Z \exp({i\oint \partial_t \chi dt\oint A_x dx})
+Z \to Z e^{iq\oint \partial_t \chi dt} = Z \exp({i\oint \partial_t \chi dt\oint A_x dx})
 \] となってしまう。分配関数の位相が定まらない！
 \end{frame}
 
@@ -831,26 +852,29 @@ A\mapsto A+d\chi
 \def\Sq{\mathop{\mathrm{Sq}}\nolimits}
 \begin{frame}
 考える対称性が
-$\mathbb{Z}_2$ 電気的 $1$-対称性と
-$\mathbb{Z}_2$ 磁気的 $1$-対称性の場合には、
+電気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}と
+磁気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の場合には、
 それぞれにゲージ場 \[
 V_\text{e}, V_\text{m} \in H^2(M_5,\mathbb{Z}_2)
 \]を導入。バルクの作用は \[
 \exp(\pi i \int_{M_5} V_\text{e} \Sq^1 V_\text{m})
 \]
 ここで $\Sq^1$ は Steenrod 作用素というもの。\\
-(1940年代後半に導入された代数トポロジーの概念)
+(これも1940年代後半に導入された代数トポロジーの概念)
 \end{frame}
 
 \begin{frame}
 考える対称性が一般共変性の場合は、$V_\text{e}, V_\text{m}$ を両方とも
-Stiefel-Whitney 類 $w_2$ にとる。するとバルクの作用は \begin{multline*}
-\exp(\pi i \int_{M_5} V_\text{e} \Sq^1 V_\text{m})\\
-=\exp(\pi i \int_{M_5} w_2 \Sq^1 w_2) \\
-= \exp(\pi i \int_{M_5} w_2  w_3) .
-\end{multline*}
+Stiefel-Whitney 類 $w_2$ にとる。するとバルクの作用は \begin{align*}
+\exp(\pi i \int_{M_5} V_\text{e} \Sq^1 V_\text{m})
+&=\exp(\pi i \int_{M_5} w_2 \Sq^1 w_2) \\
+&= \exp(\pi i \int_{M_5} w_2  w_3) .
+\end{align*}
 de Rham 不変量と呼ばれるもの。
-(導入されたのは1931年らしい)
+
+(導入されたのは1931年らしい;\\
+ Stiefel-Whitney 類と関係付いたのは
+もうすこし後)
 \end{frame}
 
 \begin{frame}
@@ -876,7 +900,8 @@ Chern-Simons が 70 年代半ばなので、それより昔の話。
 \end{frame}
 
 \begin{frame}
-数理物理では数学をいろいろつかうが、代数トポロジーはこれまであまり使われていなかった。
+数理物理では数学をいろいろつかうが、代数トポロジーはこれまで\\
+あまり使われていなかった。
 
 最近になって半世紀前の代数トポロジーを使うようになってきたのは面白い(?)ことだと思う。
 
@@ -887,9 +912,10 @@ Chern-Simons が 70 年代半ばなので、それより昔の話。
 \end{frame}
 
 \begin{frame}
-頑張ってややこしい解析をした結果、$SL(2,\mathbb{Z})$ 変換の作用するフェルミオンのアノマリの $56$ 倍であることがわかった。
+頑張ってややこしい解析をした結果、$SL(2,\mathbb{Z})$ 変換の作用する\\
+フェルミオンのアノマリの $56$ 倍であることがわかった。
 
-最近になって、この $56$ という数字は例外群の $E_7$ の最小の非自明表現の次元だということが効いていることに気がついた。
+最近になって、この $56$ という数字は例外群 $E_7$ の最小の非自明表現の次元だということが効いていることに気がついた。
 
 それを利用すれば、実際連続的に Maxwell 理論をフェルミオン $56$ 個に化かすことができる。
 
@@ -911,9 +937,11 @@ Self-dual tensor 理論は、E-string 理論という $E_8$ 対称性を持っ�
 \begin{frame}
 E-string 理論は非自明な六次元超対称共形場理論で一番小さいもので、僕は五年ぐらいまえから全然別の動機で研究していた。
 
-それが急に四次元の単なる Maxwell 理論の性質を理解するのに役に立ったので、びっくりしました。
+それが急に四次元の単なる Maxwell 理論の性質を理解するのに\\
+「役に立った」ので、びっくりしました。
 
-興味を持った人は、僕らの論文が出ましたら読んでみてください。今日の話は以上です。
+興味を持った人は、僕らの論文が出ましたら読んでみてください。\\
+今日の話は以上です。
 
 \end{frame}
 \end{document}
