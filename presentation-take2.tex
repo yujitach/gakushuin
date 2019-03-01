@@ -167,6 +167,7 @@
 
 
 
+\def\incb#1{\vcenter{\hbox{\includegraphics[scale=.18]{#1}}}}
 \def\inc#1{\vcenter{\hbox{\includegraphics[scale=.15]{#1}}}}
 \def\incc#1{\vcenter{\hbox{\includegraphics[scale=.12]{#1}}}}
 
@@ -508,7 +509,7 @@ $SL(2,\mathbb{Z})$ で $(q,m)\equiv (1,0)$, $(0,1)$, $(1,1)$ は入れ替えら�
 
 \begin{frame}
 \[
-\inc{pic7}
+\incb{pic7}
 \]
 点演算子 $\mathcal{O}$ でなくて、世界線に作用する「対称性」も考えられる。
 
@@ -518,7 +519,7 @@ $SL(2,\mathbb{Z})$ で $(q,m)\equiv (1,0)$, $(0,1)$, $(1,1)$ は入れ替えら�
 
 \begin{frame}
 \[
-\inc{pic7}
+\incb{pic7}
 \] は三次元等時刻面の切り方によってはいろいろに見える:
 \[
 \inc{pic8}
@@ -533,7 +534,7 @@ $p$-次元の対象に作用する対称性を $p$-対称性と呼ぼう。
 \[
 \begin{array}{cc}
 \text{$0$-対称性} & \inc{pic6} \\[5em]
-\text{\alert{$\alert{1}$-対称性}} & \inc{pic7} 
+\text{\alert{$\alert{1}$-対称性}} & \incb{pic7} 
 \end{array}
 \]
 \end{frame}
@@ -542,7 +543,7 @@ $p$-次元の対象に作用する対称性を $p$-対称性と呼ぼう。
 
 \begin{frame}
 \[
-\inc{pic7}
+\incb{pic7}
 \]
 Maxwell 理論では、次のような二種類の $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}を考えられる:
 \begin{itemize}
@@ -552,8 +553,8 @@ Maxwell 理論では、次のような二種類の $\mathbb{Z}_2$ \alert{$\alert
 \qquad 磁荷$m$ の世界線を越えると、$(-1)^m$ がその期待値に掛かる
 \end{itemize}
 ただし電荷 $q$ の世界線の期待値は Aharanov-Bohm 位相 \[
-\exp(2\pi i q\int \vec A \cdot d\vec x )
-\]とする。
+\exp(2\pi i q\int \vec A \cdot d\vec x )\text{。}
+\]
 \end{frame}
 
 \begin{frame}
@@ -586,8 +587,8 @@ Maxwell 理論では、次のような二種類の $\mathbb{Z}_2$ \alert{$\alert
 \begin{frame}
 \begin{gather*}
 \text{電気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の壁 \qquad 磁気的  $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の壁}\\
-\qquad\qquad\vec B= \pm\frac12 \qquad\qquad \exp(\pi i \iint \vec B \cdot d\vec\sigma)\\
-\inc{pic11}
+\qquad\qquad\vec B= \pm\frac12 \qquad\qquad \exp(\pi i \iint \vec B \cdot d\vec\sigma)\\[-2em]
+\incb{pic11}
 \end{gather*}
 同時に時空に入れると、四次元時空では、二次元面ふたつは\\
 点で交わるので微妙なことになる。
@@ -623,7 +624,7 @@ e^{\pm\pi i} =\pm i
 $360^\circ$ 捻るというのは非自明な操作。
 
 ある粒子が fermion であるとは、$360^\circ$ 捻ると $-1$ がつくということ: \[
-\inc{pic14}
+\incb{pic14}
 \]
 
 \end{frame}
@@ -634,7 +635,7 @@ $360^\circ$ 捻る操作と
 電気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁で囲むというのが\\
 同じであると言うこと。
 \[
-\inc{pic15}
+\incb{pic15}
 \]
 \end{frame}
 
@@ -644,7 +645,7 @@ $360^\circ$ 捻る操作と
 磁気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁で囲むというのが\\
 同じであると言うこと。
 \[
-\inc{pic16}
+\incb{pic16}
 \]
 \end{frame}
 
@@ -654,7 +655,7 @@ $360^\circ$ 捻る操作と
 
 四次元の時空が非自明だと、時空のパッチ間の貼り合わせのために、$360^\circ$ の捻りが必然的に生じることがある。
 
-これをはかるのが代数トポロジーでいう Stiefel-Whitney 類 $w_2$ というもの。(1940年代に導入された。)
+これをはかるのが代数トポロジーでいう \green{Stiefel-Whitney 類} $w_2$ というもの。(1940年代に導入された。)
 
 四次元時空 $M_4$ に対して、$360^\circ$ の捻りに対応する $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁に対応。
 
@@ -704,8 +705,6 @@ $SL(2,\mathbb{Z})$ で $(q,m)\equiv (1,0)$, $(0,1)$, $(1,1)$ は入れ替えら�
 & \f & \f & \f 
 \end{array}
 \]
-
-\bigskip
 
 はじめの $SL(2,\mathbb{Z})$ 不変でない三つは、\\
 電気的 $\mathbb{Z}_2$  \alert{$\alert{1}$-対称性}の壁\green{もしくは}\\
@@ -785,9 +784,9 @@ $\mathbb{CP}^2$ 内の二つの $\mathbb{CP}^1$ は一ヶ所で交わる
  A_\mu \to  A_\mu+\frac{1}{2\pi i} e^{-2\pi i\chi}\partial_\mu  e^{2\pi i\chi} = A_\mu + \partial_\mu \chi
 \] 
 だから\[
-\oint A_x dx \to \oint A_x dx + \oint \partial_x \chi dx 
+\oint A_t dt \to \oint A_t dt + \oint \partial_t \chi dt 
 \] $\chi\sim \chi+1$ だから \[
-\oint A_x dx　\sim \oint A_x dx + 1.
+\oint A_t dt　\sim \oint A_t dt + 1.
 \]
 \end{frame}
 
@@ -799,20 +798,20 @@ $1+1$ 次元境界のフェルミオンを、
 \inc{pic18}
 \]
 一粒子エネルギーレベルは \[
-E \propto n + \oint A_x dx
+E \propto n + \oint A_t dt
 \]
 負エネルギー状態は Dirac の海。
 \end{frame}
 \begin{frame}
 きちんと正則化すると、Dirac の海は電荷 \[
-q = \oint A_x dx 
+\green{q = \oint A_t dt }
 \] を持つ。
 分配関数は \[
-Z=\tr e^{-\beta H} e^{ iq \oint A_t dt}
+Z=\tr e^{-\beta H} e^{ i\green{q} \alert{\oint A_t dt}}
 \] だが、ゲージ変換\[
-\oint A_t dt \to \oint A_t dt +\oint \partial_t \chi dt
+\alert{\oint A_t dt} \to \alert{\oint A_t dt }+\alert{\oint \partial_t \chi dt}
 \] のもとで \[
-Z \to Z e^{iq\oint \partial_t \chi dt} = Z \exp({i\oint \partial_t \chi dt\oint A_x dx})
+Z \to Z e^{i\green{q}\alert{\oint \partial_t \chi dt}} = Z \exp({i\alert{\oint \partial_t \chi dt}\green{\oint A_t dt}})
 \] となってしまう。分配関数の位相が定まらない！
 \end{frame}
 
@@ -835,7 +834,7 @@ A\mapsto A+d\chi
 = \int_{\partial M_3} (d\chi) A.
 \]
 いまの状況では \[
-= \oint \partial_t\chi dt \oint A_x dx
+= \oint \alert{\partial_t\chi dt} \oint \green{A_x dx}
 \] で、ちょうど境界のフェルミオンの位相の定まらなさを相殺。
 \end{frame}
 
@@ -857,23 +856,23 @@ A\mapsto A+d\chi
 それぞれにゲージ場 \[
 V_\text{e}, V_\text{m} \in H^2(M_5,\mathbb{Z}_2)
 \]を導入。バルクの作用は \[
-\exp(\pi i \int_{M_5} V_\text{e} \Sq^1 V_\text{m})
+\exp(\pi i \int_{M_5} V_\text{e} \alert{\Sq^1} V_\text{m})
 \]
-ここで $\Sq^1$ は Steenrod 作用素というもの。\\
+ここで $\Sq^1$ は \green{Steenrod 作用素}というもの。\\
 (これも1940年代後半に導入された代数トポロジーの概念)
 \end{frame}
 
 \begin{frame}
 考える対称性が一般共変性の場合は、$V_\text{e}, V_\text{m}$ を両方とも
-Stiefel-Whitney 類 $w_2$ にとる。するとバルクの作用は \begin{align*}
-\exp(\pi i \int_{M_5} V_\text{e} \Sq^1 V_\text{m})
-&=\exp(\pi i \int_{M_5} w_2 \Sq^1 w_2) \\
+\green{Stiefel-Whitney 類} $w_2$ にとる。するとバルクの作用は \begin{align*}
+\exp(\pi i \int_{M_5} V_\text{e} \alert{\Sq^1} V_\text{m})
+&=\exp(\pi i \int_{M_5} w_2 \alert{\Sq^1} w_2) \\
 &= \exp(\pi i \int_{M_5} w_2  w_3) .
 \end{align*}
-de Rham 不変量と呼ばれるもの。
+\green{de Rham 不変量}と呼ばれるもの。
 
 (導入されたのは1931年らしい;\\
- Stiefel-Whitney 類と関係付いたのは
+Stiefel-Whitney 類と関係付いたのは
 もうすこし後)
 \end{frame}
 
@@ -882,7 +881,7 @@ de Rham 不変量と呼ばれるもの。
 \[
 \inc{pic19}
 \]
-$M_d\sim M_d'$ と定めた同値類を向き付きコボルディズムという。特に\[
+$M_d\sim M_d'$ と定めた同値類を向き付きコボルディズム類という。特に\[
 \inc{pic20}
 \] なら $M_d \sim 0$ という。
 \end{frame}
@@ -895,15 +894,18 @@ $M_d\sim M_d'$ と定めた同値類を向き付きコボルディズムとい�
 \exp(\pi i \int_{M_5} w_2  w_3) = \pm1 
 \] で区別されることが知られている。
 
+$+1$ ならつぶせる、$-1$ ならつぶせない。
+
 1950から60年代の代数トポロジーの結果。\\
 Chern-Simons が 70 年代半ばなので、それより昔の話。
 \end{frame}
 
 \begin{frame}
-数理物理では数学をいろいろつかうが、代数トポロジーはこれまで\\
-あまり使われていなかった。
+数理物理では数学をいろいろつかうが、\\
+\green{代数トポロジーはこれまで
+あまり使われていなかった。}
 
-最近になって半世紀前の代数トポロジーを使うようになってきたのは面白い(?)ことだと思う。
+最近になって\green{半世紀前の代数トポロジーを使うようになってきた}のは面白い(?)ことだと思う。
 
 さて、ここまでの話は全然僕自身の研究ではないです。
 
