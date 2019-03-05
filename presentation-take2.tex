@@ -75,6 +75,8 @@
 \setbeamercolor{palette secondary}{bg=white!80}
 \setbeamercolor{palette tertiary}{bg=white!90}
 \setbeamercolor{palette quaternary}{bg=white}
+\setbeamercolor{button}{use=local structure,fg=local structure.fg!80!bg,bg=white}
+\setbeamercolor{button border}{use=local structure,fg=local structure.fg!80!bg}
 
 \usefonttheme{serif}
 \usefonttheme{professionalfonts}
@@ -97,7 +99,7 @@
 	\end{beamercolorbox}%
 	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
 		\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}%
-		\insertframenumber{} / \inserttotalframenumber %
+		\insertframenumber{} / 51 %\inserttotalframenumber %
 		\hspace*{2ex}%
 	\end{beamercolorbox}}%
 	\vskip0pt%
@@ -266,7 +268,9 @@ S^2: & (\vec E,\vec B) \mapsto \alert{-}(\vec E,\vec B)
 \vbox{}
 \vfill
 \begin{exampleblock}{}
-\centerline{\blue{\LARGE #1}}
+\begin{center}
+\blue{\LARGE #1}
+\end{center}
 \end{exampleblock}
 \vfill
 \vbox{}
@@ -804,81 +808,32 @@ $\mathbb{CP}^2$ 内の二つの $\mathbb{CP}^1$ は一ヶ所で交わる
 \[
 \inc{pic17}
 \]
-典型例は量子ホール効果:
-\begin{itemize}
-\item 1+1次元の境界には\alert{ギャップレスカイラルフェルミオン}
-\item 2+1次元のバルクの有効作用は \green{Chern-Simons}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-考える対称性は電磁気の $U(1)$ 対称性。
-ゲージ変換は \[
- A_\mu \to  A_\mu+\frac{1}{2\pi i} e^{-2\pi i\chi}\partial_\mu  e^{2\pi i\chi} = A_\mu + \partial_\mu \chi
-\] 
-だから\[
-\oint A_t dt \to \oint A_t dt + \oint \partial_t \chi dt 
-\] $\chi\sim \chi+1$ だから \[
-\oint A_t dt　\sim \oint A_t dt + 1.
-\]
-\end{frame}
-
-
-\begin{frame}
-$1+1$ 次元境界のフェルミオンを、
-空間方向を円周上において考える。
-\[
-\inc{pic18}
-\]
-一粒子エネルギーレベルは \[
-E \propto n + \oint A_t dt
-\]
-負エネルギー状態は Dirac の海。
-\end{frame}
-\begin{frame}
-きちんと正則化すると、Dirac の海は電荷 \[
-\green{q = \oint A_t dt }
-\] を持つ。
-分配関数は \[
-Z=\tr e^{-\beta H} e^{ i\green{q} \alert{\oint A_t dt}}
-\] だが、ゲージ変換\[
-\alert{\oint A_t dt} \to \alert{\oint A_t dt }+\alert{\oint \partial_t \chi dt}
-\] のもとで \[
-Z \to Z e^{i\green{q}\alert{\oint \partial_t \chi dt}} = Z \exp({i\alert{\oint \partial_t \chi dt}\green{\oint A_t dt}})
-\] となってしまう。分配関数の位相が定まらない！
-\end{frame}
-
-\begin{frame}
-\[
-\inc{pic17}
-\]
 境界の分配関数の位相の定まらなさが、\\
 バルクの分配関数の位相の定まらなさで相殺される。
 \end{frame}
 
-\begin{frame}
-バルクの有効作用は Chern-Simons 項 $e^{iS_\text{CS}}$ ただし \[
-S_\text{CS}=\int_{M_3} AdA \propto \int_{M_3} \epsilon^{\mu\nu\rho} A_{\mu} \partial_\rho A_\sigma
-\]
-ゲージ変換 \[
-A\mapsto A+d\chi
-\] のもとでの変化は\[
-\delta \int_{M_3} AdA = \int_{M_3} d\chi dA 
-= \int_{\partial M_3} (d\chi) A.
-\]
-いまの状況では \[
-= \oint \alert{\partial_t\chi dt} \oint \green{A_x dx}
-\] で、ちょうど境界のフェルミオンの位相の定まらなさを相殺。
-\end{frame}
-
-\begin{frame}
-今日の Maxwell 理論のアノマリの場合は、
+\begin{frame}[label=inflow]
+アノマリとトポロジカル相には関係がある。
 \[
 \inc{pic17}
 \]
+典型例は量子ホール効果 \hyperlink{detail}{\beamerbutton{詳細をみる}}：
 \begin{itemize}
-\item 3+1 次元の境界に Maxwell 理論
-\item 4+1 次元のバルクには Chern-Simons 理論の親戚
+\item \blue{1+1} 次元の境界には\alert{ギャップレスカイラルフェルミオン}
+\item \blue{2+1} 次元のバルクの有効作用は \green{Chern-Simons}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+アノマリとトポロジカル相には関係がある。
+\[
+\inc{pic17}
+\]
+今日の Maxwell 理論のアノマリの場合は:
+\begin{itemize}
+\item \alert{3+1} 次元の境界に \alert{Maxwell 理論}
+\item \green{4+1} 次元のバルクには \green{Chern-Simons 理論の親戚}
 \end{itemize}
 \end{frame}
 \def\Sq{\mathop{\mathrm{Sq}}\nolimits}
@@ -941,6 +896,8 @@ Chern-Simons が 70 年代半ばなので、それより昔の話。
 
 最近になって\green{半世紀前の代数トポロジーを使うようになってきた}のは面白い(?)ことだと思う。
 
+今日の話は一応以上です。
+
 \end{frame}
 
 \boo{僕自身の研究との関係}
@@ -987,7 +944,65 @@ E-string 理論は非自明な六次元超対称共形場理論で一番小さ�
 「役に立った」ので、びっくりしました。
 
 興味を持った人は、僕らの論文が出ましたら読んでみてください。\\
-今日の話は以上です。
 
 \end{frame}
+
+\boo{カイラルフェルミオンと\\
+ Chern-Simons に関する補足}
+
+\begin{frame}[label=detail]
+考える対称性は電磁気の $U(1)$ 対称性。
+ゲージ変換は \[
+ A_\mu \to  A_\mu+\frac{1}{2\pi i} e^{-2\pi i\chi}\partial_\mu  e^{2\pi i\chi} = A_\mu + \partial_\mu \chi
+\] 
+だから\[
+\oint A_t dt \to \oint A_t dt + \oint \partial_t \chi dt 
+\] $\chi\sim \chi+1$ だから \[
+\oint A_t dt　\sim \oint A_t dt + 1.
+\]
+\end{frame}
+
+
+\begin{frame}
+$1+1$ 次元境界のフェルミオンを、
+空間方向を円周上において考える。
+\[
+\inc{pic18}
+\]
+一粒子エネルギーレベルは \[
+E \propto n + \oint A_t dt
+\]
+負エネルギー状態は Dirac の海。
+\end{frame}
+\begin{frame}
+きちんと正則化すると、Dirac の海は電荷 \[
+\green{q = \oint A_t dt }
+\] を持つ。
+分配関数は \[
+Z=\tr e^{-\beta H} e^{ i\green{q} \alert{\oint A_t dt}}
+\] だが、ゲージ変換\[
+\alert{\oint A_t dt} \to \alert{\oint A_t dt }+\alert{\oint \partial_t \chi dt}
+\] のもとで \[
+Z \to Z e^{i\green{q}\alert{\oint \partial_t \chi dt}} = Z \exp({i\alert{\oint \partial_t \chi dt}\green{\oint A_t dt}})
+\] となってしまう。分配関数の位相が定まらない！
+\end{frame}
+
+
+\begin{frame}
+バルクの有効作用は Chern-Simons 項 $e^{iS_\text{CS}}$ ただし \[
+S_\text{CS}=\int_{M_3} AdA \propto \int_{M_3} \epsilon^{\mu\nu\rho} A_{\mu} \partial_\rho A_\sigma
+\]
+ゲージ変換 \[
+A\mapsto A+d\chi
+\] のもとでの変化は\[
+\delta \int_{M_3} AdA = \int_{M_3} d\chi dA 
+= \int_{\partial M_3} (d\chi) A.
+\]
+いまの状況では \[
+= \oint \alert{\partial_t\chi dt} \oint \green{A_x dx}
+\] で、ちょうど境界のフェルミオンの位相の定まらなさを相殺。
+
+\hyperlink{inflow}{\beamerbutton{本文に戻る}}
+\end{frame}
+
 \end{document}
