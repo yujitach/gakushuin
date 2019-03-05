@@ -211,8 +211,8 @@ Maxwell 理論の\\
 \begin{frame}
 \LARGE
 \begin{align*}
-\div \vec B&=\rho_m,  &\rot \vec E + \partial_t \vec B&=\vec J_m, \\
-\div \vec E&=\rho_e, & \rot \vec B - \partial_t \vec E&=\vec J_e.
+\div \vec B&=0,  &\rot \vec E + \partial_t \vec B&=\vec 0, \\
+\div \vec E&=0, & \rot \vec B - \partial_t \vec E&=\vec 0.
 \end{align*}
 \begin{center}
 
@@ -226,8 +226,8 @@ Maxwell 理論の\\
 \begin{frame}
 \LARGE
 \begin{align*}
-\div \vec B&=\rho_m,  &\rot \vec E + \partial_t \vec B&=\vec J_m, \\
-\div \vec E&=\rho_e, & \rot \vec B - \partial_t \vec E&=\vec J_e.
+\div \vec B&=0,  &\rot \vec E + \partial_t \vec B&=\vec 0, \\
+\div \vec E&=0, & \rot \vec B - \partial_t \vec E&=\vec 0.
 \end{align*}
 \begin{center}
 ガリレイ変換で不変でない！ 
@@ -265,26 +265,31 @@ $\downarrow$
 \end{frame}
 
 
-\def\boo#1{%
+\def\boo#1{{%
+\setbeamercolor{background canvas}{bg=myblue!70!black}
+\setbeamercolor{author in head/foot}{fg=white, bg=myblue!70!black}
+\setbeamercolor{title in head/foot}{fg=white, bg=myblue!70!black}
+\setbeamercolor{date in head/foot}{fg=white, bg=myblue!70!black}
 \begin{frame}
 \vbox{}
 \vfill
-\begin{exampleblock}{}
+%\begin{exampleblock}{}
 \begin{center}
-\blue{\LARGE #1}
+\bfseries\Huge\color{White} #1
 \end{center}
-\end{exampleblock}
+%\end{exampleblock}
 \vfill
 \vbox{}
 \end{frame}
-}
+}}
 
-\boo{双対性と Dirac 量子化条件}
+\boo{電磁双対性と \\[.5em]
+Dirac 量子化条件}
 
 \begin{frame}
 \LARGE\begin{align*}
-\div \vec B&=\rho_m,  &\rot \vec E + \partial_t \vec B&=\vec J_m, \\
-\div \vec E&=\rho_e, & \rot \vec B - \partial_t \vec E&=\vec J_e.
+\div \vec B&=0,  &\rot \vec E + \partial_t \vec B&=\vec 0, \\
+\div \vec E&=0, & \rot \vec B - \partial_t \vec E&=\vec 0.
 \end{align*}
 \begin{center}
 電磁双対性: $\vec E\leftrightarrow \vec B$
@@ -293,8 +298,8 @@ $\downarrow$
 
 \begin{frame}
 \LARGE\begin{align*}
-\div \vec B&=\rho_m,  &\rot \vec E \alert{+} \partial_t \vec B&=\vec J_m, \\
-\div \vec E&=\rho_e, & \rot \vec B \alert{-} \partial_t \vec E&=\vec J_e.
+\div \vec B&=0,  &\rot \vec E \alert{+} \partial_t \vec B&=\vec 0, \\
+\div \vec E&=0, & \rot \vec B \alert{-} \partial_t \vec E&=\vec 0.
 \end{align*}
 \begin{align*}
 S: & (\vec E,\vec B) \mapsto (\alert{-}\vec B,\vec E) \\
@@ -395,7 +400,7 @@ a & b\\
 c & d
 \end{pmatrix}=1
 \end{array}
-\right\} \Longrightarrow
+\right\} \Longleftrightarrow
 \begin{pmatrix}
 a & b \\
 c & d 
@@ -535,7 +540,8 @@ $SL(2,\mathbb{Z})$ で $(q,m)\equiv (1,0)$, $(0,1)$, $(1,1)$ は入れ替えら�
 
 \end{frame}
 
-\boo{対称性の概念の一般化と Maxwell 理論}
+\boo{対称性の概念の一般化と\\[.5em]
+ Maxwell 理論}
 
 \begin{frame}
 \[
@@ -681,7 +687,8 @@ e^{\pm\pi i} =\pm i
 今回のは Maxwell 理論の電気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}と磁気的 $\mathbb{Z}_2$ \alert{$\alert{1}$-対称性}の間の混合アノマリという変なもの。
 \end{frame}
 
-\boo{Maxwell 理論の大域重力量子異常}
+\boo{Maxwell 理論の\\[.5em]
+大域重力量子異常}
 
 \begin{frame}
 さて、電荷/磁荷をもった粒子の $\b$/$\f$ の話と合わせよう。
@@ -832,7 +839,8 @@ $\mathbb{CP}^2$ 内の二つの $\mathbb{CP}^1$ は一ヶ所で交わる
 
 \end{frame}
 
-\boo{エッジ状態としての Maxwell 理論}
+\boo{エッジ状態としての\\[.5em]
+Maxwell 理論}
 
 \begin{frame}
 \alert{量子異常=アノマリ}と\green{トポロジカル相}には関係がある。
@@ -978,7 +986,7 @@ E-string 理論は非自明な六次元超対称共形場理論で一番小さ�
 
 \end{frame}
 
-\boo{カイラルフェルミオンと\\
+\boo{カイラルフェルミオンと\\[.5em]
  Chern-Simons に関する補足}
 
 \begin{frame}[label=detail]
